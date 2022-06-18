@@ -42,14 +42,15 @@ class Calculator extends React.Component {
     const celsius = scale === "f" ? tryConvert(temperature, toCelsius) : temperature;
     const fahrenheit = scale === "c" ? tryConvert(temperature, toFahrenheit) : temperature;
     return (
-      <>
+      <div className="d-flex justify-content-center mt-5">
         <div>
+          <h1 className="text-white">Temperature Converter</h1>
           <TemperatureInput scale="c" temperature={celsius} onTemperatureChange={this.handleCelsiusChange} />
           <TemperatureInput scale="f" temperature={fahrenheit} onTemperatureChange={this.handleFahrenheitChange} />
-        </div>
 
-        <BoilingVerdict celsius={parseFloat(celsius)} />
-      </>
+          <BoilingVerdict celsius={parseFloat(celsius)} />
+        </div>
+      </div>
     );
   }
 }

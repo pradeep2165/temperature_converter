@@ -21,8 +21,8 @@ export default class TemperatureInput extends React.Component {
 
     return (
       <fieldset>
-        <legend>Enter temperature in {scaleNames[scale]}:</legend>
-        <input value={temperature} onChange={this.handleChange} />
+        <legend className="text-white">Enter temperature in {scaleNames[scale]}:</legend>
+        <input type="number" value={temperature} onChange={this.handleChange} className="form-control" />
       </fieldset>
     );
   }
